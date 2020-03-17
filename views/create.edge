@@ -1,0 +1,56 @@
+@layout('layouts.app')
+
+@section('content')
+<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Add Post</h1>
+            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <h1>Create Post</h1>
+  <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form action="/posts/store" method="post">
+                <div class="control-group">
+                    <div class="form-group">
+                        <label for="">Username</label>
+                        <input type="text" class="form-control" name="username">
+                    </div>
+                    </div>
+            <div class="control-group">
+            <div class="form-group">
+                <label for="">Title</label>
+                <input type="text" class="form-control" name="title">
+            </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group">
+                    <label for="">desc</label>
+                    <input type="text" class="form-control" name="desc">
+                </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group">
+                        <label for="">Content</label>
+                <textarea name="content" id="" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    </div>
+
+                        <div class="form-group text-center">
+                        <button class="btn btn-primary ml-3 ">Create Post</button>
+                        </div>
+                        
+
+            </form>
+        </div>
+      </div>
+  </div>
+@endsection
